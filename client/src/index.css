@@ -1,0 +1,397 @@
+@import 'tailwindcss';
+
+/* ------------------------------------------------------------------ Tema belirteçleri
+   Varsayılan: sistem tercihi (color-scheme: light dark). Kullanıcı sabitlerse <html> üzerine
+   .scheme-light / .scheme-dark eklenir. JS çalışmazsa site sistem tercihini izlemeye devam eder. */
+:root {
+  color-scheme: light dark;
+  --bg: #f4f5fb;
+  --surface: #ffffff;
+  --surface-2: #eef0f8;
+  --border: #d5d9e8;
+  --text: #171a2e;
+  --muted: #5a6078;
+  --accent: #5b4bf0;
+  --accent-strong: #4737d6;
+  --accent-contrast: #ffffff;
+  --accent-soft: #e9e7ff;
+  --success: #12805c;
+  --success-soft: #dcf5ea;
+  --danger: #c4283a;
+  --danger-soft: #fde4e7;
+  --warning: #a86a00;
+  --warning-soft: #fff0d0;
+  --shadow: 0 1px 2px rgb(23 26 46 / 0.06), 0 8px 24px rgb(23 26 46 / 0.06);
+  --c-memory: #7c5cfc;
+  --c-attention: #d98b0b;
+  --c-speed: #0b8fd6;
+  --c-flexibility: #12a37a;
+  --c-reasoning: #d6457e;
+  --c-math: #e0621f;
+  --c-problem-solving: #6b7a90;
+  --c-language: #7a5c3a;
+}
+
+@media (prefers-color-scheme: dark) {
+  :root:not(.scheme-light) {
+    --bg: #0d0f1c;
+    --surface: #161930;
+    --surface-2: #1e2240;
+    --border: #363b64;
+    --text: #eef0ff;
+    --muted: #a3a9cc;
+    --accent: #8f83ff;
+    --accent-strong: #a89fff;
+    --accent-contrast: #12103a;
+    --accent-soft: #2a2760;
+    --success: #4fd6a1;
+    --success-soft: #12372c;
+    --danger: #ff7a89;
+    --danger-soft: #3f1a22;
+    --warning: #f5b94a;
+    --warning-soft: #3d2d0c;
+    --shadow: 0 1px 2px rgb(0 0 0 / 0.4), 0 8px 24px rgb(0 0 0 / 0.35);
+    --c-memory: #a48bff;
+    --c-attention: #f2b13c;
+    --c-speed: #4cb8f5;
+    --c-flexibility: #42d3a7;
+    --c-reasoning: #ff7fac;
+    --c-math: #ff9a5c;
+    --c-problem-solving: #9db0c8;
+    --c-language: #d1a878;
+  }
+}
+
+:root.scheme-light {
+  color-scheme: light;
+}
+
+:root.scheme-dark {
+  color-scheme: dark;
+  --bg: #0d0f1c;
+  --surface: #161930;
+  --surface-2: #1e2240;
+  --border: #363b64;
+  --text: #eef0ff;
+  --muted: #a3a9cc;
+  --accent: #8f83ff;
+  --accent-strong: #a89fff;
+  --accent-contrast: #12103a;
+  --accent-soft: #2a2760;
+  --success: #4fd6a1;
+  --success-soft: #12372c;
+  --danger: #ff7a89;
+  --danger-soft: #3f1a22;
+  --warning: #f5b94a;
+  --warning-soft: #3d2d0c;
+  --shadow: 0 1px 2px rgb(0 0 0 / 0.4), 0 8px 24px rgb(0 0 0 / 0.35);
+  --c-memory: #a48bff;
+  --c-attention: #f2b13c;
+  --c-speed: #4cb8f5;
+  --c-flexibility: #42d3a7;
+  --c-reasoning: #ff7fac;
+  --c-math: #ff9a5c;
+  --c-problem-solving: #9db0c8;
+  --c-language: #d1a878;
+}
+
+@theme inline {
+  --color-bg: var(--bg);
+  --color-surface: var(--surface);
+  --color-surface-2: var(--surface-2);
+  --color-line: var(--border);
+  --color-ink: var(--text);
+  --color-muted: var(--muted);
+  --color-accent: var(--accent);
+  --color-accent-strong: var(--accent-strong);
+  --color-accent-soft: var(--accent-soft);
+  --color-accent-ink: var(--accent-contrast);
+  --color-success: var(--success);
+  --color-success-soft: var(--success-soft);
+  --color-danger: var(--danger);
+  --color-danger-soft: var(--danger-soft);
+  --color-warning: var(--warning);
+  --color-warning-soft: var(--warning-soft);
+  --font-sans: 'Inter', ui-sans-serif, system-ui, -apple-system, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif;
+  --font-mono: ui-monospace, 'SFMono-Regular', Menlo, Consolas, monospace;
+}
+
+/* ------------------------------------------------------------------ Temel */
+html {
+  accent-color: var(--accent);
+  -webkit-text-size-adjust: 100%;
+}
+
+body {
+  margin: 0;
+  background: var(--bg);
+  color: var(--text);
+  font-family: var(--font-sans);
+  line-height: 1.5;
+  -webkit-font-smoothing: antialiased;
+  text-rendering: optimizeLegibility;
+}
+
+button {
+  font: inherit;
+  color: inherit;
+  cursor: pointer;
+  touch-action: manipulation;
+}
+
+button:disabled {
+  cursor: not-allowed;
+}
+
+:where(a, button, input, select, textarea, [tabindex]):focus-visible {
+  outline: 3px solid var(--accent);
+  outline-offset: 3px;
+  border-radius: 10px;
+}
+
+::selection {
+  background: color-mix(in oklab, var(--accent) 35%, transparent);
+}
+
+.visually-hidden:where(:not(:focus-within, :active)) {
+  position: absolute !important;
+  clip-path: inset(50%) !important;
+  overflow: hidden !important;
+  width: 1px !important;
+  height: 1px !important;
+  margin: -1px !important;
+  padding: 0 !important;
+  border: 0 !important;
+  white-space: nowrap !important;
+}
+
+.skip-link {
+  position: fixed;
+  top: 12px;
+  left: 12px;
+  z-index: 100;
+  padding: 10px 16px;
+  border-radius: 12px;
+  background: var(--accent);
+  color: var(--accent-contrast);
+  font-weight: 700;
+}
+
+.tabular {
+  font-variant-numeric: tabular-nums;
+}
+
+/* ------------------------------------------------------------------ Bileşenler */
+@layer components {
+  .card {
+    background: var(--surface);
+    border: 1px solid var(--border);
+    border-radius: 24px;
+    box-shadow: var(--shadow);
+  }
+
+  .card-flat {
+    background: var(--surface-2);
+    border-radius: 18px;
+  }
+
+  .btn {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    gap: 0.5rem;
+    min-height: 48px;
+    padding: 0 1.4rem;
+    border-radius: 16px;
+    border: 1px solid var(--border);
+    background: var(--surface);
+    color: var(--text);
+    font-weight: 650;
+    text-decoration: none;
+    transition: transform 0.12s ease, background-color 0.15s ease, border-color 0.15s ease;
+  }
+
+  .btn:hover:not(:disabled) {
+    background: var(--surface-2);
+  }
+
+  .btn:active:not(:disabled) {
+    transform: scale(0.97);
+  }
+
+  .btn-primary {
+    background: var(--accent);
+    border-color: var(--accent);
+    color: var(--accent-contrast);
+  }
+
+  .btn-primary:hover:not(:disabled) {
+    background: var(--accent-strong);
+    border-color: var(--accent-strong);
+  }
+
+  .btn-lg {
+    min-height: 58px;
+    padding: 0 2rem;
+    font-size: 1.1rem;
+    border-radius: 18px;
+  }
+
+  .btn-sm {
+    min-height: 40px;
+    padding: 0 1rem;
+    font-size: 0.9rem;
+    border-radius: 12px;
+  }
+
+  .btn-danger {
+    color: var(--danger);
+    border-color: color-mix(in oklab, var(--danger) 45%, var(--border));
+  }
+
+  .btn:disabled {
+    opacity: 0.5;
+  }
+
+  .chip {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.35rem;
+    padding: 0.2rem 0.65rem;
+    border-radius: 999px;
+    font-size: 0.78rem;
+    font-weight: 650;
+    background: var(--surface-2);
+    color: var(--muted);
+  }
+
+  .eyebrow {
+    font-size: 0.78rem;
+    font-weight: 700;
+    letter-spacing: 0.08em;
+    text-transform: uppercase;
+    color: var(--muted);
+  }
+
+  /* Oyun sahnesi düğmeleri: büyük, dokunmatik dostu */
+  .play-btn {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    min-height: 64px;
+    min-width: 64px;
+    border-radius: 20px;
+    border: 2px solid var(--border);
+    background: var(--surface);
+    color: var(--text);
+    font-weight: 750;
+    transition: transform 0.08s ease, background-color 0.12s ease, border-color 0.12s ease;
+    user-select: none;
+    -webkit-user-select: none;
+  }
+
+  .play-btn:hover:not(:disabled) {
+    border-color: var(--accent);
+    background: var(--surface-2);
+  }
+
+  .play-btn:active:not(:disabled) {
+    transform: scale(0.96);
+  }
+
+  .play-btn[data-state='correct'] {
+    border-color: var(--success);
+    background: var(--success-soft);
+  }
+
+  .play-btn[data-state='wrong'] {
+    border-color: var(--danger);
+    background: var(--danger-soft);
+  }
+
+  .play-btn[data-state='missed'] {
+    border-style: dashed;
+    border-color: var(--success);
+  }
+}
+
+/* ------------------------------------------------------------------ Animasyonlar */
+@keyframes pop-in {
+  from {
+    opacity: 0;
+    transform: scale(0.85);
+  }
+  to {
+    opacity: 1;
+    transform: scale(1);
+  }
+}
+
+@keyframes shake {
+  0%,
+  100% {
+    transform: translateX(0);
+  }
+  25% {
+    transform: translateX(-6px);
+  }
+  75% {
+    transform: translateX(6px);
+  }
+}
+
+@keyframes fade-up {
+  from {
+    opacity: 0;
+    transform: translateY(8px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.anim-pop {
+  animation: pop-in 0.16s ease-out both;
+}
+
+.anim-shake {
+  animation: shake 0.22s ease-in-out;
+}
+
+.anim-fade-up {
+  animation: fade-up 0.35s ease-out both;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+    scroll-behavior: auto !important;
+  }
+}
+
+html[data-reduce-motion='true'] *,
+html[data-reduce-motion='true'] *::before,
+html[data-reduce-motion='true'] *::after {
+  animation-duration: 0.01ms !important;
+  animation-iteration-count: 1 !important;
+  transition-duration: 0.01ms !important;
+  scroll-behavior: auto !important;
+}
+
+/* Yüksek karşıtlık tercihi olan kullanıcılar için kenarlıkları güçlendir */
+@media (prefers-contrast: more) {
+  :root {
+    --border: color-mix(in oklab, var(--text) 55%, transparent);
+    --muted: color-mix(in oklab, var(--text) 80%, var(--bg));
+  }
+}
+
+dialog::backdrop {
+  background: rgb(8 10 24 / 0.6);
+  backdrop-filter: blur(3px);
+}

@@ -1,0 +1,171 @@
+{
+  "video_duration": 77.933333,
+  "narration_duration": 77.933,
+  "final_duration": 77.933,
+  "lines": [
+    {
+      "line": 1,
+      "start": 0.0,
+      "window": 6.0,
+      "final_duration": 5.712,
+      "fits": true,
+      "attempts": [
+        [
+          "+0%",
+          7.752
+        ],
+        [
+          "+36%",
+          5.712
+        ]
+      ],
+      "text": "Beyin jimnastiği platformumuz Lumostiy'e hoş geldiniz. Karşınızda ana kontrol paneli."
+    },
+    {
+      "line": 2,
+      "start": 6.0,
+      "window": 7.5,
+      "final_duration": 7.248,
+      "fits": true,
+      "attempts": [
+        [
+          "+0%",
+          7.248
+        ]
+      ],
+      "text": "Oyunlar sekmesinde, Basic'ten Uzman seviyesine uzanan 5 kademeli dinamik zorluk sistemi yer alıyor."
+    },
+    {
+      "line": 3,
+      "start": 13.5,
+      "window": 5.0,
+      "final_duration": 4.752,
+      "fits": true,
+      "attempts": [
+        [
+          "+0%",
+          6.288
+        ],
+        [
+          "+33%",
+          4.752
+        ]
+      ],
+      "text": "Memory Grid oyununda seviye çubuğumuzu ve kuralları inceleyip egzersize başlıyoruz."
+    },
+    {
+      "line": 4,
+      "start": 18.5,
+      "window": 18.0,
+      "final_duration": 7.032,
+      "fits": true,
+      "attempts": [
+        [
+          "+0%",
+          7.032
+        ]
+      ],
+      "text": "Parlayan hücreleri aklımızda tutup işaretleyerek çalışma belleğimizi aktif biçimde güçlendiriyoruz."
+    },
+    {
+      "line": 5,
+      "start": 36.5,
+      "window": 6.0,
+      "final_duration": 5.688,
+      "fits": true,
+      "attempts": [
+        [
+          "+0%",
+          6.528
+        ],
+        [
+          "+15%",
+          5.688
+        ]
+      ],
+      "text": "Platformumuz serbest oyunların yanında kişiselleştirilmiş günlük antrenman programı sunar."
+    },
+    {
+      "line": 6,
+      "start": 42.5,
+      "window": 5.0,
+      "final_duration": 4.704,
+      "fits": true,
+      "attempts": [
+        [
+          "+0%",
+          5.4
+        ],
+        [
+          "+15%",
+          4.704
+        ]
+      ],
+      "text": "Günlük Plan, zayıf alanlarınıza göre dengeli bir egzersiz hazırlar."
+    },
+    {
+      "line": 7,
+      "start": 47.5,
+      "window": 5.0,
+      "final_duration": 4.752,
+      "fits": true,
+      "attempts": [
+        [
+          "+0%",
+          5.952
+        ],
+        [
+          "+26%",
+          4.752
+        ]
+      ],
+      "text": "İlerleme sayfasında bilişsel kategorilerdeki gelişiminizi takip edebilirsiniz."
+    },
+    {
+      "line": 8,
+      "start": 52.5,
+      "window": 5.0,
+      "final_duration": 4.728,
+      "fits": true,
+      "attempts": [
+        [
+          "+0%",
+          6.024
+        ],
+        [
+          "+28%",
+          4.728
+        ]
+      ],
+      "text": "Profil sekmesinde kişisel rekorlarınız ve motive edici başarım rozetleri yer alır."
+    },
+    {
+      "line": 9,
+      "start": 57.5,
+      "window": 10.5,
+      "final_duration": 6.192,
+      "fits": true,
+      "attempts": [
+        [
+          "+0%",
+          6.192
+        ]
+      ],
+      "text": "Ayarlar alanında koyu tema, renk körlüğü modu ve erişilebilirlik seçenekleri bulunur."
+    },
+    {
+      "line": 10,
+      "start": 68.0,
+      "window": 9.933333000000005,
+      "final_duration": 8.376,
+      "fits": true,
+      "attempts": [
+        [
+          "+0%",
+          8.376
+        ]
+      ],
+      "text": "Antrenman planınızı özelleştirebilirsiniz. Lumostiy: Zihninizi her gün bir adım ileri taşıyın!"
+    }
+  ]
+}

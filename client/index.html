@@ -1,0 +1,26 @@
+<!doctype html>
+<html lang="tr">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="color-scheme" content="light dark" />
+    <meta name="description" content="NeuroLoop — günlük 5-15 dakikalık beyin egzersizleri: hafıza, dikkat, hız, esneklik, akıl yürütme ve matematik." />
+    <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+    <title>NeuroLoop — Zihin Antrenmanı</title>
+    <script>
+      // Tema tercihini boyamadan önce uygula (FOUC önlemi). Boş = sistem tercihi.
+      try {
+        var raw = localStorage.getItem('neuroloop:v1');
+        var scheme = raw && JSON.parse(raw).state.settings.colorScheme;
+        if (scheme === 'light' || scheme === 'dark') {
+          document.documentElement.classList.add('scheme-' + scheme);
+          document.querySelector('meta[name="color-scheme"]').content = scheme;
+        }
+      } catch (e) {}
+    </script>
+  </head>
+  <body>
+    <div id="root"></div>
+    <script type="module" src="/src/main.tsx"></script>
+  </body>
+</html>

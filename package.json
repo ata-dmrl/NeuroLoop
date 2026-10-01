@@ -1,0 +1,12 @@
+{
+  "name": "neuroloop",
+  "private": true,
+  "version": "0.1.0",
+  "scripts": {
+    "install:all": "npm --prefix client install",
+    "dev": "npm --prefix client run dev",
+    "build": "npm --prefix client run build",
+    "test": "npm --prefix client run test",
+    "typecheck": "npm --prefix client run typecheck"
+  }
+}

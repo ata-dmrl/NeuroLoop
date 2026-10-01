@@ -1,0 +1,167 @@
+{
+  "video_duration": 78.466667,
+  "narration_duration": 78.467,
+  "final_duration": 78.466667,
+  "lines": [
+    {
+      "line": 1,
+      "start": 0.0,
+      "window": 7.0,
+      "final_duration": 6.696,
+      "fits": true,
+      "attempts": [
+        [
+          "-6%",
+          8.544
+        ],
+        [
+          "+20%",
+          6.696
+        ]
+      ],
+      "text": "NeuroLoop'a hoş geldin. Karşında zihin antrenmanı panelin ve bugünkü egzersiz planın duruyor."
+    },
+    {
+      "line": 2,
+      "start": 7.0,
+      "window": 8.0,
+      "final_duration": 7.608,
+      "fits": true,
+      "attempts": [
+        [
+          "-6%",
+          7.608
+        ]
+      ],
+      "text": "Aşağıda bilişsel profilini, haftalık ilerlemeni ve kişisel rekorlarını tek bakışta görebiliyorsun."
+    },
+    {
+      "line": 3,
+      "start": 15.0,
+      "window": 7.5,
+      "final_duration": 7.176,
+      "fits": true,
+      "attempts": [
+        [
+          "-6%",
+          7.176
+        ]
+      ],
+      "text": "Oyunlar kütüphanesinde on bir farklı egzersiz var; istersen alana göre filtreleyebilirsin."
+    },
+    {
+      "line": 4,
+      "start": 22.5,
+      "window": 5.0,
+      "final_duration": 3.48,
+      "fits": true,
+      "attempts": [
+        [
+          "-6%",
+          3.48
+        ]
+      ],
+      "text": "Hadi Memory Grid ile başlayalım."
+    },
+    {
+      "line": 5,
+      "start": 27.5,
+      "window": 18.0,
+      "final_duration": 9.0,
+      "fits": true,
+      "attempts": [
+        [
+          "-6%",
+          9.0
+        ]
+      ],
+      "text": "Parlayan hücreleri ezberleyip doğru sırayla işaretliyoruz; her turda zorluk, performansına göre otomatik ayarlanıyor."
+    },
+    {
+      "line": 6,
+      "start": 45.5,
+      "window": 8.5,
+      "final_duration": 6.432,
+      "fits": true,
+      "attempts": [
+        [
+          "-6%",
+          6.432
+        ]
+      ],
+      "text": "Günlük antrenman sekmesinde sana özel seçilmiş beş oyunluk planını görüyorsun."
+    },
+    {
+      "line": 7,
+      "start": 54.0,
+      "window": 5.0,
+      "final_duration": 4.68,
+      "fits": true,
+      "attempts": [
+        [
+          "-6%",
+          4.68
+        ]
+      ],
+      "text": "Profil sayfasında beceri gelişimini takip edebilirsin."
+    },
+    {
+      "line": 8,
+      "start": 59.0,
+      "window": 4.5,
+      "final_duration": 4.248,
+      "fits": true,
+      "attempts": [
+        [
+          "-6%",
+          5.04
+        ],
+        [
+          "+12%",
+          4.248
+        ]
+      ],
+      "text": "Oyun rekorların ve on beş başarımın da burada seni bekliyor."
+    },
+    {
+      "line": 9,
+      "start": 63.5,
+      "window": 9.0,
+      "final_duration": 7.704,
+      "fits": true,
+      "attempts": [
+        [
+          "-6%",
+          7.704
+        ]
+      ],
+      "text": "Ayarlar'da açık ya da koyu temayı, hareket azaltmayı ve renk yardımcısını kolayca değiştirebilirsin."
+    },
+    {
+      "line": 10,
+      "start": 72.5,
+      "window": 5.966667000000001,
+      "final_duration": 5.856,
+      "fits": false,
+      "attempts": [
+        [
+          "-6%",
+          7.464
+        ],
+        [
+          "+20%",
+          5.856
+        ],
+        [
+          "+20%",
+          5.856
+        ],
+        [
+          "+20%",
+          5.856
+        ]
+      ],
+      "text": "Oyunlarını özelleştir, ilerlemeni dışa aktar. NeuroLoop ile başarılar!"
+    }
+  ]
+}
